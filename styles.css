@@ -30,8 +30,7 @@
     padding: 10px 15px;
   }
 
-  #cropslist,
-  #petslist {
+  #cropslist,   #petslist,   #mutationlist {
     width: auto;
     display: inline-block;
     font-size: 18px;
@@ -44,8 +43,8 @@
     border: 1px solid #5972df;
   }
 
-  .tierlist-table-crops th,
-  .tierlist-table-crops td {
+  .grow-garden-tables th,
+  .grow-garden-tables td {
     font-size: 16px;
     padding: 10px;
   }
@@ -279,7 +278,7 @@ body {
   font-size: 13px;
 }
 
-/* This is the crops table */
+/* This is the crops border title */
 #cropslist {
   display: flex;
   justify-content: center;   /* horizontal centering */
@@ -305,17 +304,17 @@ body {
  margin-bottom: 5px;
 }
 
-.cropslink {
+.item-link {
   font-weight: 700;
-  color: white;
+  color: #9eaadd;
   text-decoration: none;
 }
 
-.cropslink:hover {
+.item-link:hover {
   color: #5972df;
 }
 
-/* This is the table titles */
+/* This is the pets border title */
 #petslist {
   display: flex;
   justify-content: center;   /* horizontal centering */
@@ -341,8 +340,34 @@ body {
  margin-bottom: 5px;
 }
 
+/* This is the mutation type border title */
+#mutationlist {
+  display: flex;
+  justify-content: center;   /* horizontal centering */
+  align-items: center; 
+  text-align: center;
+  color: white;
+  background-color: #5972df;;
+  border-radius: 50px;
+  width: 15%;
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+  margin-bottom: 2px;
+  transition: transform 0.3s ease;
+}
+
+#mutationlistdate {
+ color: white;
+ font-family: Arial, sans-serif;
+ margin-top: 0;
+ margin-bottom: 5px;
+}
+
 /* This is the tables */
-.tierlist-table-crops {
+.grow-garden-tables {
   width: 80%;
   margin: 2% auto;
   margin-bottom: 5%;
@@ -354,24 +379,24 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.tierlist-table-crops th,
-.tierlist-table-crops td {
+.grow-garden-tables th,
+.grow-garden-tables td {
   padding: 20px;
   text-align: left;
 }
 
-.tierlist-table-crops th {
+.grow-garden-tables th {
   font-weight: bold;
   font-size: 23px;
   color: #5972df;;
   border-bottom: 1px solid gray;
 }
 
-.tierlist-table-crops td {  
+.grow-garden-tables td {  
   font-size: 20px;
 }
 
-.tierlist-table-crops tr:not(:last-child) {
+.grow-garden-tables tr:not(:last-child) {
   border-bottom: 1px solid gray;
 }
 
@@ -384,16 +409,18 @@ margin-bottom: 20px;
 
 /* fourth content */
 #fourthbar {
-border-bottom: 1px solid transparent;
+border-bottom: 1px solid gray;
 width: 100%;
 margin-bottom: 20px;
 }
 
-/* fifth content 
-#fifthbar {
 
+#fifthbar {
+border-bottom: 1px solid transparent;
+width: 100%;
+margin-bottom: 20px;
 } 
-*/
+
 
 /* quote only */
 #quote-line p {
@@ -403,4 +430,3 @@ margin-bottom: 20px;
   padding-bottom: 50px;
   padding-top: 5px;
 }
-
