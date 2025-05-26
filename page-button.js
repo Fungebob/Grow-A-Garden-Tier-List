@@ -7,21 +7,35 @@ document.getElementById('officialGame-btn').addEventListener('click', function()
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
   const fadeElements = document.querySelectorAll('.scroll-fade');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-        entry.target.classList.add('fade-out');
-      } else {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
         entry.target.classList.remove('fade-out');
+      } else {
+        entry.target.classList.add('fade-out');
+        entry.target.classList.remove('fade-in');
       }
     });
   }, {
-    threshold: 1
+    threshold: 0.1 // Triggers fade-in earlier
   });
 
-  fadeElements.forEach(el => observer.observe(el));
+  fadeElements.forEach(el => {
+    observer.observe(el);
+
+    // Trigger fade-in if already in view on page load
+    const rect = el.getBoundingClientRect();
+    const inView = rect.top < window.innerHeight && rect.bottom > 0;
+    if (inView) {
+      el.classList.add('fade-in');
+    }
+  });
+});
+
 
 
 
