@@ -1,101 +1,20 @@
-/* smaller device */
-@media (max-width: 768px) {
-  #littlecontainer {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 20px;
-    gap: 10px;
-  }
-
-  .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    width: 100%;
-  }
-  .nav-links a {
-    font-size: 14px;
-    margin: 0 10px;
-    flex: 1 1 auto;
-    text-align: center;
-  }
-
-  #firsttitle, #secondtitle {
-    font-size: 24px;
-  }
-
-  .button-container button,
-  .button-container2 button {
-    font-size: 16px;
-    padding: 10px 15px;
-  }
-
-  #cropslist,   #petslist,   #mutationlist {
-    width: auto;
-    display: inline-block;
-    font-size: 18px;
-    padding: 10px 85px;
-    text-align: center;
-    border-radius: 50px;
-    white-space: nowrap;
-    background-color: #5972df;
-    color: white;
-    border: 1px solid #5972df;
-  }
-
-  .grow-garden-tables th,
-  .grow-garden-tables td {
-    font-size: 16px;
-    padding: 10px;
-  }
+/* Global Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* scroll */
 html {
   scroll-behavior: smooth;
 }
 
- /* fade away when not on screen */
-.scroll-fade {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.scroll-fade.fade-out {
-  opacity: 0;
-  transform: translateY(40px);
-  pointer-events: none;
-}
-
-
-/* body */
 body {
   background-color: #111215;
-  margin: 0;
-  padding: 0;
-}
-
-/* website name */
-#websitename {
-  color: #5972df;
   font-family: Arial, sans-serif;
-  font-weight: 700;
 }
 
-/* photo beside website name */
-#logo-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo {
-  width: 30px;
-  height: 30px;
-}
-
-/* background of the site (gif) */
+/* Background GIF */
 .background-gif {
   position: fixed;
   top: 0;
@@ -108,125 +27,126 @@ body {
   opacity: 0.15;
 }
 
-/* navigation bar */
+/* Website Branding */
+#websitename {
+  color: #5972df;
+  font-weight: 700;
+}
+
+#logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+}
+
+/* Navigation Bar */
 #littlecontainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(30, 30, 30, 0.5);
-  padding: 0px 30px;
+  padding: 0 30px;
   color: white;
-  padding-top: 0;
-  
 }
 
 #littlecontainer p {
   font-size: 25px;
 }
 
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 25px 0;
+}
+
 .nav-links a {
-  margin: 0 15px;
   color: white;
   font-size: 15px;
   text-decoration: none;
-  font-family: Arial, sans-serif;
+  margin: 0 15px;
+  padding: 5px;  
   border: 1px solid transparent;
+  border-radius: 20px;
   transition: all 0.2s ease;
+  display: inline-block;
 }
 
 .nav-links a:hover {
- background: transparent;
- border: 1px solid rgba(89, 114, 223, 0.5);
- padding: 5px;
- border-radius: 20px;
+  background: transparent;
+  border: 1px solid rgba(89, 114, 223, 0.5);
+  
 }
 
-/* container */
+/* Scroll Fade Effect */
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(40);
+  transition: opacity 2s ease-out, transform 0.6s ease-out;
+  pointer-events: none;
+}
+
+.scroll-fade.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.scroll-fade.fade-out {
+  opacity: 0;
+  transform: translateY(40px);
+  pointer-events: none;
+}
+
+/* Section Containers */
 .container {
   background-color: transparent;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  flex-direction: column;
-} 
+}
 
-/* first content */
+/* First Section */
 #firstbar {
   color: white;
+  width: 100%;
   padding-bottom: 50px;
   border-bottom: 1px solid gray;
-  width: 100%;
-  font-family: Arial, sans-serif;
 }
 
 #firsttitle {
   font-size: 30px;
   color: #5972df;
-  margin-bottom: 0;
+  margin-bottom: 20px;
+  margin-top: 1%;
   padding-top: 2%;
 }
 
 #firstparagraph {
   font-size: 18px;
-  line-height: 1.2
+  line-height: 1.2;
+  padding-bottom: 1%;
 }
 
-#gamelink {
-  font-size: 30px;
-  margin-top: 70px;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.button-container button {
-  background-color: #5972df;
-  color: white;
-  font-weight: 700;
-  border: 0px solid black;
-  border-radius: 50px;
-  padding: 15px 20px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-/* pulse animation for button Roblox Game */
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-}
-
-.button-container button:hover {
-  animation: pulse 1s infinite;
-}
-
-.button-container button:active {
-  transform: scale(0.95);
-  background-color: #374151;
-}
-
-/* second content */
+/* Second Section */
 #secondbar {
   color: white;
-  padding-bottom: 100px;
-  padding-top: 50px;
   width: 100%;
+  padding: 50px 0 100px;
   border-bottom: 1px solid gray;
 }
 
 #secondtitle {
   font-size: 35px;
-  padding-top: 1%;
-  margin-bottom: 0;
+  margin-top: 8%;
+  margin-bottom: 10px;
   color: #5972df;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
@@ -234,40 +154,126 @@ body {
 
 #secondparagraph {
   font-size: 20px;
-  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
 }
 
+/* Buttons */
+.button-container button {
+  margin-top: 2%;
+}
+
+.button-container,
+.button-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container button,
 .button-container2 button {
   background-color: #5972df;
-  border: 0px solid black;
-  border-radius: 50px;
   color: white;
-  padding: 15px 20px;
-  font-size: 20px;
   font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 20px;
+  font-size: 18px;
+  cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-/* pulse animation for button Join Now */
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
+.button-container2 button {
+  font-size: 20px;
+  margin-bottom: 2%;
 }
 
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.button-container button:hover,
 .button-container2 button:hover {
   animation: pulse 1s infinite;
 }
 
+.button-container button:active,
 .button-container2 button:active {
   transform: scale(0.95);
   background-color: #374151;
 }
 
-/* This is the fixed bottom info */
+/* Reusable Tag Styles (Crops, Pets, Mutation) */
+#cropslist {
+  margin-top: 20px;
+}
+
+#cropslist,
+#petslist,
+#mutationlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #5972df;
+  border-radius: 50px;
+  width: 15%;
+  font-size: 30px;
+  padding: 10px 0;
+  font-weight: 700;
+  margin-bottom: 2px;
+  transition: transform 0.3s ease;
+}
+
+#cropslistdate,
+#petslistdate,
+#mutationlistdate {
+  color: white;
+  margin: 0 0 5px;
+}
+
+/* Tables */
+.grow-garden-tables {
+  width: 80%;
+  margin: 2% auto 5%;
+  border-collapse: collapse;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.grow-garden-tables th,
+.grow-garden-tables td {
+  padding: 20px;
+  text-align: left;
+}
+
+.grow-garden-tables th {
+  font-size: 23px;
+  font-weight: bold;
+  color: #5972df;
+  border-bottom: 1px solid gray;
+}
+
+.grow-garden-tables td {
+  font-size: 20px;
+}
+
+.grow-garden-tables tr:not(:last-child) {
+  border-bottom: 1px solid gray;
+}
+
+/* Quote Section */
+#quote-line p {
+  border-top: 3px solid #5972df;
+  color: white;
+  font-size: 60px;
+  margin-bottom: 80px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Bottom Info */
 #bottom-info {
   color: white;
   position: fixed;
@@ -276,34 +282,24 @@ body {
   width: 100%;
   background-color: #374151;
   font-size: 13px;
+  font-family: 'Times New Roman', Times, serif;
+  padding-top: 3px;
 }
 
-/* This is the crops border title */
-#cropslist {
-  display: flex;
-  justify-content: center;   /* horizontal centering */
-  align-items: center; 
-  text-align: center;
-  color: white;
-  background-color: #5972df;;
-  border-radius: 50px;
-  width: 15%;
-  font-size: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-weight: 700;
-  font-family: Arial, sans-serif;
-  margin-bottom: 2px;
-  transition: transform 0.3s ease;
+/* Reusable Sections */
+#thirdbar,
+#fourthbar,
+#fifthbar {
+  border-bottom: 1px solid gray;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-#cropslistdate {
- color: white;
- font-family: Arial, sans-serif;
- margin-top: 0;
- margin-bottom: 5px;
+#fifthbar {
+  border-bottom: 1px solid transparent;
 }
 
+/* Links */
 .item-link {
   font-weight: 700;
   color: #9eaadd;
@@ -314,119 +310,63 @@ body {
   color: #5972df;
 }
 
-/* This is the pets border title */
-#petslist {
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  #littlecontainer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    gap: 10px;
+  }
+
+  #logo-container {
   display: flex;
-  justify-content: center;   /* horizontal centering */
   align-items: center;
-  text-align: center;
-  color: white;
-  background-color: #5972df;;
-  border-radius: 50px;
-  width: 15%;
-  font-size: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-weight: 700;
-  font-family: Arial, sans-serif;
-  margin-bottom: 2px;
-  transition: transform 0.3s ease;
-}
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  }
 
-#petslistdate {
- color: white;
- font-family: Arial, sans-serif;
- margin-top: 0;
- margin-bottom: 5px;
-}
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+  }
 
-/* This is the mutation type border title */
-#mutationlist {
-  display: flex;
-  justify-content: center;   /* horizontal centering */
-  align-items: center; 
-  text-align: center;
-  color: white;
-  background-color: #5972df;;
-  border-radius: 50px;
-  width: 15%;
-  font-size: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-weight: 700;
-  font-family: Arial, sans-serif;
-  margin-bottom: 2px;
-  transition: transform 0.3s ease;
-}
+  .nav-links a {
+    font-size: 14px;
+    margin: 0 10px;
+    flex: 1 1 auto;
+    text-align: center;
+  }
 
-#mutationlistdate {
- color: white;
- font-family: Arial, sans-serif;
- margin-top: 0;
- margin-bottom: 5px;
-}
+  #firsttitle,
+  #secondtitle {
+    font-size: 24px;
+  }
 
-/* This is the tables */
-.grow-garden-tables {
-  width: 80%;
-  margin: 2% auto;
-  margin-bottom: 5%;
-  border-collapse: collapse;
-  border-radius: 20px;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
-  font-family: Arial, sans-serif;
-}
+  .button-container button,
+  .button-container2 button {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
 
-.grow-garden-tables th,
-.grow-garden-tables td {
-  padding: 20px;
-  text-align: left;
-}
+  #cropslist,
+  #petslist,
+  #mutationlist {
+    width: auto;
+    padding: 10px 50px;
+    font-size: 18px;
+    white-space: nowrap;
+  }
 
-.grow-garden-tables th {
-  font-weight: bold;
-  font-size: 23px;
-  color: #5972df;;
-  border-bottom: 1px solid gray;
-}
+  .grow-garden-tables th,
+  .grow-garden-tables td {
+    font-size: 16px;
+    padding: 10px;
+  }
 
-.grow-garden-tables td {  
-  font-size: 20px;
-}
-
-.grow-garden-tables tr:not(:last-child) {
-  border-bottom: 1px solid gray;
-}
-
-/* third content */
-#thirdbar {
-border-bottom: 1px solid gray;
-width: 100%;
-margin-bottom: 20px;
-}
-
-/* fourth content */
-#fourthbar {
-border-bottom: 1px solid gray;
-width: 100%;
-margin-bottom: 20px;
-}
-
-
-#fifthbar {
-border-bottom: 1px solid transparent;
-width: 100%;
-margin-bottom: 20px;
-} 
-
-
-/* quote only */
-#quote-line p {
-  border-top: 3px solid #5972df;
-  color: white;
-  font-size: 60px;
-  padding-bottom: 50px;
-  padding-top: 5px;
+  #quote-line p {
+    font-size: 36px;
+    margin-bottom: 80px;
+  }
 }
