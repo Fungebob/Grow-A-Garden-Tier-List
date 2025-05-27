@@ -310,6 +310,33 @@ body {
   color: #5972df;
 }
 
+/* up and down animation and top the top button */
+#backtotop-btn {
+  background-color: #5972df;
+  border: 1px solid transparent;
+  padding: 20px 10px;
+  position: fixed;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  bottom: 50px;
+  right: 30px;
+  border-radius: 50px;
+  animation: upAndDown 2s ease-in-out infinite;
+}
+#backtotop-btn:hover {
+  background-color: #647be4;
+}
+
+@keyframes upAndDown {
+  0%, 100% {
+    bottom: 65px;
+  }
+  50% {
+    bottom: 50px;
+  }
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   #littlecontainer {
@@ -368,5 +395,14 @@ body {
   #quote-line p {
     font-size: 36px;
     margin-bottom: 80px;
+  }
+
+    #backtotop-btn {
+    font-size: 16px;     
+    padding: 15px 8px;  
+    bottom: 80px;         
+    right: 20px;          
+    border-radius: 40px;  
+    animation: none;
   }
 }
