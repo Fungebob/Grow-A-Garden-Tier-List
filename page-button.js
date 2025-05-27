@@ -36,6 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+  const backToTopBtn = document.getElementById("backtotop-btn");
 
-
-
+  // Add the animation class when the page scrolls
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      backToTopBtn.classList.add("animate");
+    } else {
+      backToTopBtn.classList.remove("animate");
+    }
+  });
