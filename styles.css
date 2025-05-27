@@ -11,7 +11,8 @@ html {
 
 body {
   background-color: #111215;
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 
 /* Background GIF */
@@ -30,7 +31,11 @@ body {
 /* Website Branding */
 #websitename {
   color: #5972df;
-  font-weight: 700;
+  font-weight: 200;
+  font-family: "Jaro", sans-serif;
+  font-size: 35px !important;
+  font-style: normal;
+  -webkit-text-stroke: 1px #213380; 
 }
 
 #logo-container {
@@ -40,8 +45,8 @@ body {
 }
 
 .logo {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 /* Navigation Bar */
@@ -127,6 +132,10 @@ body {
   margin-bottom: 20px;
   margin-top: 1%;
   padding-top: 2%;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  -webkit-text-stroke: 1px #213380; 
 }
 
 #firstparagraph {
@@ -148,8 +157,10 @@ body {
   margin-top: 8%;
   margin-bottom: 10px;
   color: #5972df;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  -webkit-text-stroke: 1px #213380; 
 }
 
 #secondparagraph {
@@ -173,7 +184,8 @@ body {
 .button-container2 button {
   background-color: #5972df;
   color: white;
-  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
   border: none;
   border-radius: 50px;
   padding: 15px 20px;
@@ -324,6 +336,7 @@ body {
   border-radius: 50px;
   animation: upAndDown 2s ease-in-out infinite;
 }
+
 #backtotop-btn:hover {
   background-color: #647be4;
 }
@@ -406,3 +419,4 @@ body {
     animation: none;
   }
 }
+
